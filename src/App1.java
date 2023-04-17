@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -45,18 +46,36 @@ public class App1 {
         // // Семинар 2. Задание 1.
         // System.out.println("Введено число: " + getFloat());
 
-        // Семинар 2. Задание 2.
-        int[] intArray = {1,2,3,4,5,6,7,8,9};
-        try {
-            int d = 0;
-            double catchedRes1 = intArray[8] / d;
-            System.out.println("catchedRes1 = " + catchedRes1);
-         } catch (ArithmeticException|ArrayIndexOutOfBoundsException e) {
-            System.out.println("Catching exception: " + e);
-         } finally {
-            System.out.println("Завершено");
-         }
+        // // Семинар 2. Задание 2.
+        // int[] intArray = {1,2,3,4,5,6,7,8,9};
+        // try {
+        //     int d = 0;
+        //     double catchedRes1 = intArray[8] / d;
+        //     System.out.println("catchedRes1 = " + catchedRes1);
+        //  } catch (ArithmeticException|ArrayIndexOutOfBoundsException e) {
+        //     System.out.println("Catching exception: " + e);
+        //  } finally {
+        //     System.out.println("Завершено");
+        //  }
          
+        // // Семинар 2. Задание 3.
+        // try {
+        //     int a = 90;
+        //     int b = 3;
+        //     System.out.println(a / b);
+        //     printSum(23, 23);
+        //     int[] abc = { 1, 2 };
+        //     abc[3] = 9;         
+        // } catch (NullPointerException ex) {
+        //     System.out.println("Указатель не может указывать на null!");
+        // } catch (IndexOutOfBoundsException ex) {
+        //     System.out.println("Массив выходит за пределы своего размера!");
+        // } catch (Throwable ex) {
+        //     System.out.println("Что-то пошло не так...");
+        // }
+     
+        // Семинар 3. Задание 4.
+        prompt("Введите что-нибудь");
     }
 
     /**
@@ -77,6 +96,7 @@ public class App1 {
      * Семинар 1. Задание 1. Метод ввода данных с клавиатуры. 
      * NumberFormatException - ввод строковых вместо цифр, 
      * NoSuchElementException - отсуствие введенных данных
+     * Семинар 4. Задание 4. При пустом вводе выбрасывает NoSuchElementException
      * @param message
      * @return
      */
@@ -148,4 +168,9 @@ public class App1 {
         in.close();
         return flNum;
     }
+
+    public static void printSum(Integer a, Integer b) throws FileNotFoundException {
+        System.out.println(a + b);
+     }
+     
 }

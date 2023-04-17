@@ -46,12 +46,15 @@ public class App1 {
         // System.out.println("Введено число: " + getFloat());
 
         // Семинар 2. Задание 2.
+        int[] intArray = {1,2,3,4,5,6,7,8,9};
         try {
             int d = 0;
             double catchedRes1 = intArray[8] / d;
             System.out.println("catchedRes1 = " + catchedRes1);
-         } catch (ArithmeticException e) {
+         } catch (ArithmeticException|ArrayIndexOutOfBoundsException e) {
             System.out.println("Catching exception: " + e);
+         } finally {
+            System.out.println("Завершено");
          }
          
     }
